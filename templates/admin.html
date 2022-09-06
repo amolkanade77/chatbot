@@ -1,0 +1,51 @@
+<div>
+
+
+   
+<a href="{{ url_for('excel') }}">FlaskApp</a>
+
+
+
+<table style="margin-left: 20px;">
+    <!-- Table headers -->
+        <th>
+             <tr style="color: black; ">
+    
+            <th>id</th>
+            <th>shopname</th>
+            <th>Orderone</th>
+            <th>ornumber</th>
+            <th>last_name</th>
+            <th>age</th>
+          
+            </tr>
+        </th>
+    
+        
+        {% for patient_id in data %}
+        <tr>
+    
+        <td>
+            {{patient_id.id}}
+         </td>
+         <td>
+            {{patient_id.shopname}}
+        </td>
+        <td>
+            {{patient_id.Orderone}}
+        </td>
+        <td>
+            {{patient_id.ornumber}}
+        </td>
+        <td>
+            {{patient_id.last_name}}
+        </td>
+        <td>
+            {{patient_id.age}}
+        </td>
+        
+        {% endfor %}
+        </tr>
+     </table>
+
+</div>
