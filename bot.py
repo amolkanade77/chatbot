@@ -49,7 +49,7 @@ def bot():
         msg.body('Please place order!')
     return str(resp)
 
-import pandas as pd
+
 @app.route('/displaydata', methods=['GET'])
 def display():
     users = Profile.query.all()
